@@ -2,4 +2,7 @@
 
 ## API products
 
-use Express, mongodb
+backend API
+Stack:
+- Express, 
+- mongodb,
