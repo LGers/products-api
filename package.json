@@ -1,0 +1,31 @@
+{
+  "name": "products-api",
+  "version": "1.0.0",
+  "description": "use Express, mongodb",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LGers/products-api.git"
+  },
+  "author": "Leonid.Mychko @LGers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LGers/products-api/issues"
+  },
+  "homepage": "https://github.com/LGers/products-api#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "mongoose": "^6.5.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}
