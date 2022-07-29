@@ -6,32 +6,29 @@ class PostService {
     return Post.create({ ...post, picture: fileName })
   }
 
-  async getAll() {
+  getAll() {
     return Post.find();
   }
 
-  async getOne(id) {
+  getOne(id) {
     if (!id) {
       throw new Error('Bad request. Id required');
     }
-    const post = await Post.findById(id);
-    return post;
+    return Post.findById(id);
   }
 
-  async update(post) {
+  update(post) {
     if (!post._id) {
       throw new Error('Bad request. Id required');
     }
-    const updatedPost = await Post.findByIdAndUpdate(post._id, post, { new: true });
-    return updatedPost;
+    return Post.findByIdAndUpdate(post._id, post, { new: true });
   }
 
-  async delete(id) {
+  delete(id) {
     if (!id) {
       throw new Error('Bad request. Id required');
     }
-    const post = await Post.findByIdAndDelete(id);
-    return post;
+    return Post.findByIdAndDelete(id);
   }
 }
 
