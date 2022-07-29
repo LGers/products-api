@@ -1,10 +1,11 @@
 import Post from './Post.js';
-
+import fileService from './fileService.js';
 class PostService {
-  create(post) {
+  create(post, picture) {
     // const { author, title, content, picture } = req.body;
     // return Post.create(post);
-    return Post.create(post)
+    const fileName = fileService.saveFile(picture)
+    return Post.create({ ...post, picture: fileName })
     // const createdPost = Post.create(post);
     // return createdPost
     // res.status(200).json(createdPost);
